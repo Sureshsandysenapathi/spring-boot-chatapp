@@ -1,0 +1,153 @@
+/* General styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #1f1f2e;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #eaeaea;
+}
+
+/* Chat container */
+.chat-container {
+    width: 100%;
+    max-width: 600px;
+    background-color: #2a2a40;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    box-sizing: border-box;
+    color: #eaeaea;
+}
+
+/* Header */
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #4fc3f7;
+    border-bottom: 2px solid #4fc3f7;
+    padding-bottom: 10px;
+}
+
+/* Input box styling */
+.input-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input[type="text"] {
+    width: 100%;
+    max-width: 500px;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #4fc3f7;
+    border-radius: 6px;
+    background-color: #2e2e3d;
+    color: #eaeaea;
+    font-size: 16px;
+}
+
+input[type="text"]::placeholder {
+    color: #888;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: #4fc3f7;
+    box-shadow: 0 0 5px rgba(79, 195, 247, 0.8);
+}
+
+/* Messages container */
+#messages {
+    max-height: 350px;
+    overflow-y: auto;
+    padding: 10px;
+    background-color: #232334;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    color: #eaeaea;
+}
+
+/* Individual messages */
+.message-list {
+    margin-top: 20px;
+}
+
+.message {
+    padding: 12px 15px;
+    margin-bottom: 8px;
+    background-color: #3c3c54;
+    border-radius: 6px;
+    word-wrap: break-word;
+    font-size: 14px;
+    color: #eaeaea;
+    transition: background-color 0.3s;
+}
+
+.message.sent {
+    background-color: #4fc3f7;
+    color: #2a2a40;
+    font-weight: bold;
+}
+
+/* Buttons */
+button {
+    background-color: #4fc3f7;
+    color: #2a2a40;
+    border: none;
+    padding: 12px 20px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 14px;
+    transition: background-color 0.3s, transform 0.1s ease-in-out;
+}
+
+button:hover {
+    background-color: #39a0d3;
+    transform: scale(1.05);
+}
+
+button:disabled {
+    background-color: #777;
+    cursor: not-allowed;
+}
+
+button:active {
+    transform: scale(1);
+}
+
+input[type="text"]:focus,
+button:focus {
+    outline: none;
+}
+
+/* Scrollbar styling */
+#messages::-webkit-scrollbar {
+    width: 8px;
+}
+
+#messages::-webkit-scrollbar-track {
+    background: #2a2a40;
+}
+
+#messages::-webkit-scrollbar-thumb {
+    background-color: #4fc3f7;
+    border-radius: 4px;
+}
+
+/* User status */
+#userStatus {
+    font-size: 16px;
+    color: #4fc3f7;
+    text-align: center;
+    margin-bottom: 15px;
+}
+ 
